@@ -1,6 +1,7 @@
 # Table of contents
 
-* [🖌 Getting started](README.md)
+* [🟥 Drum Robot 2](README.md)
+* [Getting start](getting-start.md)
 
 ## INTRODUCTION
 

@@ -1,9 +1,16 @@
-# 🖌 Getting started
+---
+description: '//프로젝트 개요 : Can 통신을 활용한 9자유도 다축 모터제어 SW handover document'
+layout: landing
+---
+
+# 🟥 Drum Robot 2
 
 ## Welcome !
 
-A design system is a product, and similar best practices to product docs apply when documenting a design system. Offering succinct ways to get started is a great way to introduce the concepts of your design system, while empowering folks to use it for their needs.
+#### \*적당히 인삿말\*
+
+#### \*드럼 로봇 사진\*
 
 {% hint style="info" %}
-Use this template to introduce the concept of your design system. Outlining basic principles and ways of working to get every team on the same page.
+저작권 관련 공지
 {% endhint %}
