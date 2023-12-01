@@ -1,24 +1,27 @@
 # Table of contents
 
 * [🟥 Drum Robot 2](README.md)
-* [Getting start](getting-start.md)
 
-## INTRODUCTION
+## Linux
 
-* [Design Principles](introduction/design-principles.md)
-* [Brand Guidelines](introduction/brand-guidelines.md)
-* [How updates work](introduction/how-updates-work.md)
-* [Accessibility](introduction/accessibility.md)
+* [Design Principles](linux/design-principles.md)
+* [Brand Guidelines](linux/brand-guidelines.md)
+* [How updates work](linux/how-updates-work.md)
+* [Accessibility](linux/accessibility.md)
 
-## identity
+## C++
 
-* [Logos](identity/logos.md)
-* [Colors](identity/colors.md)
-* [Typography](identity/typography.md)
-* [Imagery](identity/imagery.md)
+* [Logos](c++/logos.md)
+* [Colors](c++/colors.md)
+* [Typography](c++/typography.md)
+* [Imagery](c++/imagery.md)
 
-## Components
+## C.A.N
 
-* [Icons](components/icons.md)
-* [Buttons](components/buttons.md)
-* [Inputs](components/inputs.md)
+* [Icons](c.a.n/icons.md)
+* [Buttons](c.a.n/buttons.md)
+* [Inputs](c.a.n/inputs.md)
+
+## control-algorithm
+
+* [Page 1](control-algorithm/page-1.md)

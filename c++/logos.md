@@ -1,3 +1,7 @@
+---
+description: 멀티스레딩 / 객체지향 / 디자인 패턴
+---
+
 # Logos
 
 {% hint style="info" %}

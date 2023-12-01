@@ -1,6 +1,16 @@
 ---
 description: '//프로젝트 개요 : Can 통신을 활용한 9자유도 다축 모터제어 SW handover document'
-layout: landing
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 🟥 Drum Robot 2
