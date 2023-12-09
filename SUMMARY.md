@@ -2,7 +2,12 @@
 
 ## LINUX
 
+* [Introduction to Linux](linux/README.md)
+
 ## C++
+
+* [C++ Basics](c++/README.md)
+
 
 ## C.A.N
 
@@ -12,3 +17,5 @@
 * [Linux Setup for CAN](c.a.n/Linux%20Setup%20for%20CAN.md)
 
 ## CONTROL-ALGORITHM
+
+* [Algorithm Basics](control-algorithm/README.md)
