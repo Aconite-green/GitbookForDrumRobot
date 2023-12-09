@@ -1,6 +1,6 @@
 ---
 description: PID/ 경로생성
-cover: ../.gitbook/assets/top-8-algorithms-every-programmer-should-know.png
+cover: ../.gitbook/assets/top-8-algorithms-every-programmer-should-know (1).png
 coverY: 3
 layout:
   cover:
