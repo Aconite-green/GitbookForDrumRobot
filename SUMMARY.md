@@ -9,5 +9,3 @@
 * [Linux Setup for CAN](c.a.n/Linux%20Setup%20for%20CAN.md)
 
 ***
-
-* [Page](page.md)
