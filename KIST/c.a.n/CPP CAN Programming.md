@@ -4,17 +4,61 @@ cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
-# Basics
+# C++ CAN Programming
 
-{% hint style="info" %}
-**Good to know:** you can embed a Storybook canvas by simple pasting the canvas link and hitting enter.
-{% endhint %}
+This section delves into the specifics of programming CAN communication using C++ in various environments.
 
-An Icon is a piece of visual element, but we must ensure its accessibility while using it. It can have **2 purposes**:
+## Introduction to CAN Programming in C++
 
-* _**decorative only**_: for example, it illustrates a label next to it. We must ensure that it is ignored by screen readers, by setting aria-hidden attribute (ex: `<Icon icon="check" aria-hidden />`)
-* _**non-decorative**_: it means that it delivers information. For example, an icon as only child in a button. The meaning can be obvious visually, but it must have a proper text alternative via `aria-label` for screen readers. (ex:`<Icon icon="print" aria-label="Print this document" />`)
+Explaining the basics of CAN programming within the C++ environment, including the necessary tools and libraries.
 
-{% embed url="https://5ccbc373887ca40020446347-geedzbiswp.chromatic.com/iframe.html?id=icon--labels&args=&viewMode=story" %}
-These examples are taken from the excellent [Storybook Example Design System](https://5ccbc373887ca40020446347-geedzbiswp.chromatic.com/?path=/story/icon--labels).
-{% endembed %}
+### Required Tools and Libraries
+
+- Overview of C++ compilers and IDEs suitable for CAN programming.
+- Discussion of essential libraries and drivers for CAN communication.
+
+## Integrating CAN Interface with C++
+
+Guidance on integrating CAN hardware interfaces with C++ code.
+
+### Choosing a CAN Interface
+
+- Criteria for selecting appropriate CAN hardware for different applications.
+
+### Setting Up CAN Interface in C++
+
+- Step-by-step guide to configuring the CAN interface in a C++ environment.
+
+## CAN Socket API in C++
+
+Detailed explanation of using the CAN socket API for communication.
+
+### Basic Concepts of CAN Socket API
+
+- Introduction to socket programming in relation to CAN communication.
+
+### Example: Sending and Receiving CAN Messages
+
+- Sample C++ code demonstrating how to send and receive CAN messages.
+
+## Advanced CAN Programming Concepts
+
+Covering more complex aspects of CAN programming in C++.
+
+### Error Handling and Diagnostics
+
+- Techniques for detecting and handling errors in CAN communication.
+
+### Optimizing CAN Communication
+
+- Strategies for optimizing the performance and reliability of CAN systems.
+
+## Conclusion
+
+Summarizing the key points covered and providing additional resources for further exploration in C++ CAN programming.
+
+### Further Reading and Resources
+
+- Links to advanced tutorials, documentation, and community forums for C++ CAN programming.
+
+
