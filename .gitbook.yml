@@ -3,4 +3,4 @@ structure:
   readme: README.md
   summary: SUMMARY.md
   pages:
-    - c.a.n: c.a.n/CAN Basics.md
+    - c.a.n: c.a.n/README.md
