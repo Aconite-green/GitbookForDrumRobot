@@ -1,0 +1,9 @@
+root: ./
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+  pages:
+    - c.a.n: c.a.n/Basics.md
+    - c.a.n/CAN Protocols: c.a.n/CAN Protocols.md
+    - c.a.n/CPP CAN Programming: c.a.n/CPP CAN Programming.md
+    - c.a.n/Linux Setup for CAN: c.a.n/Linux Setup for CAN.md
