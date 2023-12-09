@@ -1,8 +1,0 @@
-root: ./
-structure:
-  readme: 'CAN Basics.md'
-  pages:
-    - 'CAN Basics': 'CAN Basics.md'
-    - 'CAN Protocols': 'CAN Protocols.md'
-    - 'CPP CAN Programming': 'CPP CAN Programming.md'
-    - 'Linux Setup for CAN': 'Linux Setup for CAN.md'
