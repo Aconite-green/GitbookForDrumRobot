@@ -4,17 +4,45 @@ cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
-# Basics
+# CAN Communication Basics
+
+This section covers the fundamental concepts and importance of CAN (Controller Area Network) communication.
 
 {% hint style="info" %}
-**Good to know:** you can embed a Storybook canvas by simple pasting the canvas link and hitting enter.
+**Good to know:** CAN communication plays a crucial role in in-vehicle networks and industrial automation systems.
 {% endhint %}
 
-An Icon is a piece of visual element, but we must ensure its accessibility while using it. It can have **2 purposes**:
+## What is CAN Communication?
 
-* _**decorative only**_: for example, it illustrates a label next to it. We must ensure that it is ignored by screen readers, by setting aria-hidden attribute (ex: `<Icon icon="check" aria-hidden />`)
-* _**non-decorative**_: it means that it delivers information. For example, an icon as only child in a button. The meaning can be obvious visually, but it must have a proper text alternative via `aria-label` for screen readers. (ex:`<Icon icon="print" aria-label="Print this document" />`)
+CAN communication is a network protocol that enables reliable data exchange between various devices. It is widely used for communication between electronic systems in vehicles.
 
-{% embed url="https://5ccbc373887ca40020446347-geedzbiswp.chromatic.com/iframe.html?id=icon--labels&args=&viewMode=story" %}
-These examples are taken from the excellent [Storybook Example Design System](https://5ccbc373887ca40020446347-geedzbiswp.chromatic.com/?path=/story/icon--labels).
-{% endembed %}
+### History of CAN Communication
+
+CAN communication was developed in the 1980s by Bosch, a German company. Initially designed for in-vehicle networking, it has since been adopted in various industrial sectors.
+
+### Basic Principles of CAN Communication
+
+CAN communication follows a multi-master serial bus standard, meaning each device on the network has the authority to transmit messages.
+
+{% hint style="info" %}
+**Note:** In a CAN network, unique identifiers (IDs) are used to determine message priority and prevent data collision.
+{% endhint %}
+
+### Advantages of CAN Communication
+
+- High reliability and error resilience
+- Low cost and simple wiring
+- Efficient data transmission
+
+### Limitations of CAN Communication
+
+- Limited data transmission speed
+- Restrictions on message length
+- Complexity in network design
+
+## Conclusion
+
+CAN communication plays a significant role in the automotive industry and industrial automation, with its usage continually expanding.
+
+_Reference: [More Detailed Information on CAN Communication](link address)_
+
