@@ -1,7 +1,7 @@
 ---
 description: 멀티스레딩 / 객체지향 / 디자인 패턴
 cover: >-
-  ../.gitbook/assets/images_kimku1018_post_43d1fa08-3a92-40c7-84cc-ceefbe3be879_스크린샷
+  ../gitbook/assets/images_kimku1018_post_43d1fa08-3a92-40c7-84cc-ceefbe3be879_스크린샷
   2021-09-08 오후 7.48.45.png
 coverY: 0
 ---
