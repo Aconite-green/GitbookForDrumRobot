@@ -16,13 +16,13 @@ This section covers the fundamental concepts, history, and importance of CAN (Co
 
 CAN communication is a message-based protocol, designed originally for multiplex electrical wiring within automobiles to save on copper, but it is also used in many other contexts. It enables reliable data exchange between various devices without a host computer.
 
-![What is CAN Communication](../gitbook/assets/What_CAN.png)
+<img src="../gitbook/assets/What_CAN.png" alt="What is CAN Communication" style="width: 50%;"/>
 
 ### History of CAN Communication
 
 Development of the CAN bus started in 1983 at Robert Bosch GmbH. The protocol was officially released in 1986 at the Society of Automotive Engineers (SAE) conference in Detroit, Michigan. The first CAN controller chips were introduced by Intel in 1987, followed by Philips. The Mercedes-Benz W140 was the first production vehicle to feature a CAN-based multiplex wiring system.
 
-![History of CAN Communication](../gitbook/assets/History_CAN.png)
+<img src="../gitbook/assets/History_CAN.png" alt="History of CAN Communication" style="width: 50%;"/>
 
 Bosch published several versions of the CAN specification, with the latest being CAN 2.0 in 1991, which has two parts: Part A for the standard format with an 11-bit identifier, and Part B for the extended format with a 29-bit identifier.
 
