@@ -1,107 +1,107 @@
 ---
 description: CAN 관련된 것
-cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
+cover: ../gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
-# CAN Protocol Introduction
+# CAN 프로토콜 소개
 
-This section provides an in-depth overview of the purpose, functionality, and applications of the CAN (Controller Area Network) protocol.
+이 섹션에서는 CAN (Controller Area Network) 프로토콜의 목적, 기능성, 그리고 응용 분야에 대한 심층적인 개요를 제공합니다.
 
-## Purpose and Functionality of CAN Protocol
+## CAN 프로토콜의 목적 및 기능성
 
-The CAN protocol, developed initially for automotive use, is a message-based protocol designed to allow microcontrollers and devices to communicate without a host computer. It is essential in multiplex electrical wiring within vehicles and is increasingly used in other industrial contexts.
+초기에 자동차 용도로 개발된 CAN 프로토콜은 호스트 컴퓨터 없이 마이크로컨트롤러와 장치들이 서로 통신할 수 있게 해주는 메시지 기반 프로토콜입니다. 자동차 내 다중 전기 배선에 필수적이며 다른 산업 분야에서도 점점 더 사용되고 있습니다.
 
-### Historical Development
+### 역사적 발전
 
-- **Origin**: Developed in 1983 at Robert Bosch GmbH and released in 1986.
-- **Evolution**: First adopted in the Mercedes-Benz W140 in 1991, with continuous advancements like CAN 2.0 and CAN FD.
+- **기원**: 1983년 로버트 보쉬 GmbH에서 개발되었으며 1986년에 공개됨.
+- **진화**: 1991년 메르세데스-벤츠 W140에 최초로 채택되었으며, CAN 2.0 및 CAN FD와 같은 지속적인 발전을 이룸.
 
-## Areas of Application
+## 응용 분야
 
-CAN protocol's applications extend beyond its initial automotive purpose:
+CAN 프로토콜의 응용 분야는 초기 자동차 목적을 넘어서 확장되었습니다:
 
-- **Automotive Systems**: Links various electronic control units (ECUs) within vehicles.
-- **Industrial Automation**: Facilitates communication in complex industrial systems.
-- **Other Applications**: Used in medical instruments, building automation, agricultural machinery, and more.
+- **자동차 시스템**: 차량 내 다양한 전자 제어 장치(ECU)를 연결함.
+- **산업 자동화**: 복잡한 산업 시스템에서의 통신을 용이하게 함.
+- **기타 응용**: 의료 기기, 건물 자동화, 농업 기계 등에서 사용됨.
 
-# CAN Message Frames
+# CAN 메시지 프레임
 
-A critical aspect of CAN protocol is its message frame structure which ensures efficient and prioritized communication.
+CAN 프로토콜의 핵심적인 측면은 효율적이고 우선순위가 있는 통신을 보장하는 메시지 프레임 구조입니다.
 
-## Standard vs. Extended CAN Frames
+## 표준 대 확장 CAN 프레임
 
-- **Standard CAN Frames**: Utilize an 11-bit identifier suitable for most applications.
-- **Extended CAN Frames**: Employ a 29-bit identifier for more complex systems, allowing more data payloads and greater flexibility.
+- **표준 CAN 프레임**: 대부분의 응용 분야에 적합한 11비트 식별자를 사용함.
+- **확장 CAN 프레임**: 더 복잡한 시스템을 위해 29비트 식별자를 사용하여 더 많은 데이터 페이로드와 더 큰 유연성을 제공함.
 
-## Frame Structure
+## 프레임 구조
 
-A typical CAN frame includes:
+전형적인 CAN 프레임은 다음을 포함합니다:
 
-- **Identifier**: Determines the message's priority and type.
-- **Control Field**: Indicates the size of the data field.
-- **Data Field**: Contains the payload of up to 8 bytes.
-- **CRC**: Ensures data integrity.
-- **ACK**: Confirms message receipt.
+- **식별자**: 메시지의 우선순위와 유형을 결정함.
+- **제어 필드**: 데이터 필드의 크기를 나타냄.
+- **데이터 필드**: 최대 8바이트의 페이로드를 포함함.
+- **CRC**: 데이터 무결성을 보장함.
+- **ACK**: 메시지 수신을 확인함.
 
-# Message Transmission and Reception
+# 메시지 전송 및 수신
 
-Understanding message transmission and reception processes is crucial in CAN networks.
+CAN 네트워크에서 메시지 전송 및 수신 과정을 이해하는 것이 중요합니다.
 
-## Transmission Process
+## 전송 과정
 
-- Details on message broadcasting, arbitration, and collision handling.
-- **Arbitration**: Explains how the CAN protocol handles simultaneous message transmission using identifier-based priority.
+- 메시지 방송, 중재, 충돌 처리에 대한 세부 정보.
+- **중재**: 동시에 메시지 전송을 처리하는 CAN 프로토콜의 식별자 기반 우선순위 메커니즘 설명.
 
-## Error Detection and Correction Mechanisms
+## 오류 탐지 및 수정 메커니즘
 
-- Highlights the role of CRC and ACK in maintaining reliable communication.
-- **Error Handling**: Discusses how the CAN protocol detects and corrects errors.
+- 신뢰할 수 있는 통신을 유지하기 위해 CRC 및 ACK의 역할 강조.
+- **오류 처리**: CAN 프로토콜이 오류를 탐지하고 수정하는 방법 논의.
 
-## Message Priority
+## 메시지 우선순위
 
-- Delve into how the identifier field influences message transmission priority in the network.
+- 네트워크에서 메시지 전송 우선순위에 영향을 미치는 식별자 필드에 대해 자세히 알아봄.
 
-# CAN Network Topology
+# CAN 네트워크 토폴로지
 
-CAN networks can be configured in various topologies based on application requirements.
+CAN 네트워크는 응용 요구사항에 따라 다양한 토폴로지로 구성될 수 있습니다.
 
-## Physical Configuration
+## 물리적 구성
 
-- **Bus Topology**: The most common configuration in vehicles.
-- **Star and Ring Topologies**: Used in more complex or larger-scale applications.
+- **버스 토폴로지**: 차량에서 가장 일반적으로 사용되는 구성.
+- **스타 및 링 토폴로지**: 더 복잡하거나 대규모 응용 분야에서 사용됨.
 
-# Error Management and Network Security
+# 오류 관리 및 네트워크 보안
 
-In-depth analysis of error handling and security considerations in CAN networks.
+CAN 네트워크의 오류 처리 및 보안 고려사항에 대한 심층 분석.
 
-## Types of Errors in CAN Networks
+## CAN 네트워크의 오류 유형
 
-- Categorization and impact of different error types.
-- **Common Errors**: Bit errors, frame errors, and error propagation.
+- 다양한 오류 유형의 분류 및 영향.
+- **일반적인 오류**: 비트 오류, 프레임 오류 및 오류 전파.
 
-## Error Detection and Recovery Mechanism
+## 오류 탐지 및 복구 메커니즘
 
-- Mechanisms like error counters and automatic retransmission in error handling.
-- **Fault Confinement**: How CAN systems prevent faulty nodes from disrupting the network.
+- 오류 처리에서 오류 카운터 및 자동 재전송과 같은 메커니즘.
+- **고장 격리**: CAN 시스템이 고장난 노드가 네트워크를 방해하지 못하도록 방지함.
 
-## Considerations for Network Security
+## 네트워크 보안 고려사항
 
-- Challenges in securing CAN networks against external threats and potential solutions.
+- 외부 위협에 대한 CAN 네트워크 보안을 확보하기 위한 도전과 해결책.
 
-# Protocol Extensions and Current Trends
+# 프로토콜 확장 및 최신 동향
 
-A look at the latest developments and future directions of CAN technology.
+CAN 기술의 최신 발전과 미래 방향에 대한 통찰.
 
 ## CAN FD (Flexible Data-rate)
 
-- Introduction to CAN with Flexible Data-Rate (CAN FD), offering higher data rates and larger payload capacity.
-- **Advantages of CAN FD**: Improved bandwidth and efficiency over traditional CAN.
+- 더 높은 데이터 속도와 더 큰 페이로드 용량을 제공하는 유연한 데이터 속도(CAN FD)가 있는 CAN 소개.
+- **CAN FD의 장점**: 전통적인 CAN에 비해 개선된 대역폭과 효율성.
 
-## New Applications and Directions
+## 새로운 응용 및 방향
 
-- Exploring emerging use cases of CAN in various industries, including advancements in autonomous vehicles and smart industrial systems.
+- 자율 주행 차량 및 스마트 산업 시스템과 같은 다양한 산업 분야에서 CAN의 새로운 사용 사례 탐색.
 
-## Ongoing Development
+## 지속적인 개발
 
-- Discussion on the continual development and adaptation of the CAN protocol to meet evolving technological needs.
+- 기술적 요구 사항의 변화에 따라 CAN 프로토콜의 지속적인 개발과 적응에 대한 논의.

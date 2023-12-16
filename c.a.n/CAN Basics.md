@@ -4,57 +4,57 @@ cover: ../gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
-# CAN Communication Basics
+# CAN 통신 기초
 
-This section covers the fundamental concepts, history, and importance of CAN (Controller Area Network) communication.
+이 섹션에서는 CAN (Controller Area Network) 통신의 기본 개념, 역사, 그리고 중요성에 대해 다룹니다.
 
 {% hint style="info" %}
-**Good to know:** CAN communication plays a crucial role in in-vehicle networks, industrial automation systems, and various other contexts.
+**알아두면 좋은 사실:** CAN 통신은 차량 내 네트워크, 산업 자동화 시스템, 그리고 여러 다른 맥락에서 중요한 역할을 합니다.
 {% endhint %}
 
-## What is CAN Communication?
+## CAN 통신이란?
 
-CAN communication is a message-based protocol, designed originally for multiplex electrical wiring within automobiles to save on copper, but it is also used in many other contexts. It enables reliable data exchange between various devices without a host computer.
+CAN 통신은 본래 자동차 내 복합 전기 배선을 위해 설계된 메시지 기반 프로토콜로, 동시에 여러 다른 맥락에서도 사용됩니다. 이는 호스트 컴퓨터 없이 다양한 장치 간에 신뢰할 수 있는 데이터 교환을 가능하게 합니다.
 
 <img src="../gitbook/assets/What_CAN.png" alt="What is CAN Communication" style="width: 50%;"/>
 
-### History of CAN Communication
+### CAN 통신의 역사
 
-Development of the CAN bus started in 1983 at Robert Bosch GmbH. The protocol was officially released in 1986 at the Society of Automotive Engineers (SAE) conference in Detroit, Michigan. The first CAN controller chips were introduced by Intel in 1987, followed by Philips. The Mercedes-Benz W140 was the first production vehicle to feature a CAN-based multiplex wiring system.
+CAN 버스의 개발은 1983년 로버트 보쉬 GmbH에서 시작되었습니다. 이 프로토콜은 1986년 디트로이트, 미시간에서 열린 자동차 엔지니어 협회(SAE) 콘퍼런스에서 공식적으로 발표되었습니다. 최초의 CAN 컨트롤러 칩은 1987년 인텔에 의해 소개되었으며, 이어 필립스에 의해서도 소개되었습니다. 메르세데스-벤츠 W140은 CAN 기반 복합 배선 시스템을 특징으로 하는 최초의 생산 차량이었습니다.
 
 <img src="../gitbook/assets/History_CAN.png" alt="History of CAN Communication" style="width: 50%;"/>
 
-Bosch published several versions of the CAN specification, with the latest being CAN 2.0 in 1991, which has two parts: Part A for the standard format with an 11-bit identifier, and Part B for the extended format with a 29-bit identifier.
+보쉬는 여러 버전의 CAN 사양을 발표했으며, 가장 최신 버전은 1991년에 발표된 CAN 2.0입니다. 이 사양에는 표준 형식인 11비트 식별자를 위한 Part A와 확장 형식인 29비트 식별자를 위한 Part B가 있습니다.
 
-In 1993, the International Organization for Standardization (ISO) released CAN standard ISO 11898, which was later restructured into two parts covering the data link layer and the physical layer for high-speed CAN. ISO 11898-3, released later, covers the CAN physical layer for low-speed, fault-tolerant CAN.
+1993년, 국제 표준화 기구(ISO)는 고속 CAN을 위한 데이터 링크 계층과 물리적 계층을 다루는 ISO 11898 표준을 발표했습니다. 이후 발표된 ISO 11898-3은 저속, 내고장성 CAN의 물리적 계층을 다룹니다.
 
-In 2012, Bosch released CAN FD 1.0, or CAN with Flexible Data-Rate, which is compatible with existing CAN 2.0 networks.
+2012년, 보쉬는 기존 CAN 2.0 네트워크와 호환되는 CAN FD 1.0 또는 유연한 데이터 속도를 가진 CAN을 발표했습니다.
 
-### Basic Principles of CAN Communication
+### CAN 통신의 기본 원리
 
-CAN communication uses a multi-master serial bus standard, where each device on the network has the authority to transmit messages. Unique identifiers (IDs) are used to determine message priority and prevent data collision.
+CAN 통신은 네트워크 상의 각 장치가 메시지를 전송할 수 있는 권한을 가진 멀티-마스터 직렬 버스 표준을 사용합니다. 고유 식별자(ID)는 메시지의 우선순위를 결정하고 데이터 충돌을 방지하는 데 사용됩니다.
 
-### Advantages of CAN Communication
+### CAN 통신의 장점
 
-- High reliability and error resilience
-- Low cost and simple wiring
-- Efficient data transmission
+- 높은 신뢰성 및 오류 복원력
+- 저렴한 비용 및 간단한 배선
+- 효율적인 데이터 전송
 
-### Limitations of CAN Communication
+### CAN 통신의 한계
 
-- Limited data transmission speed
-- Restrictions on message length
-- Complexity in network design
+- 제한된 데이터 전송 속도
+- 메시지 길이에 대한 제한
+- 네트워크 설계의 복잡성
 
-## Applications of CAN Communication
+## CAN 통신의 응용
 
-- **Automotive**: Used in passenger vehicles, trucks, buses, and agricultural equipment.
-- **Industrial Automation**: Applied in factory automation, mechanical control, and building automation.
-- **Medical Instruments**: Utilized in complex medical equipment for reliable communication.
-- **Other Fields**: Including aviation, maritime applications, lighting control systems, and robotics.
+- **자동차**: 승용차, 트럭, 버스 및 농업 장비에 사용됩니다.
+- **산업 자동화**: 공장 자동화, 기계 제어, 건물 자동화에 적용됩니다.
+- **의료 기기**: 복잡한 의료 장비에서 신뢰할 수 있는 통신을 위해 사용됩니다.
+- **기타 분야**: 항공, 해양 응용, 조명 제어 시스템, 로봇공학 등에 포함됩니다.
 
-## Conclusion
+## 결론
 
-CAN communication's versatility and robustness have led to its wide adoption in various fields beyond automotive. Its continual development, like the introduction of CAN FD, ensures its relevance in modern technology applications.
+CAN 통신의 다재다능함과 견고함은 자동차 분야를 넘어 다양한 분야에서 널리 채택되게 만들었습니다. CAN FD와 같은 지속적인 개발은 현대 기술 응용 분야에서 그 중요성을 보장합니다.
 
-_Reference: [More Detailed Information on CAN Communication](link address)_
+_Reference: [CAN 통신에 대한 보다 자세한 정보](link address)_
