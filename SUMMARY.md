@@ -15,7 +15,6 @@
 
 ## C++
 
-* [C++ Basics](c++/README.md)
 * [Advanced Data Structures and Algorithms](c++/Advanced_Data_Structures_and_Algorithms.md)
 * [Memory Management in CPP](c++/Memory_Management_in_CPP.md)
 * [Template Programming in CPP](c++/Template_Programming_in_CPP.md)
