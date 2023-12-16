@@ -1,64 +1,62 @@
 ---
-description: CAN 곤련된거
-cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
+description: CAN 관련된 것
+cover: ../gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
-# Linux Setup for CAN Communication
+# 리눅스에서의 CAN 통신 설정
 
-This section provides a comprehensive guide to setting up a Linux environment for CAN communication, including necessary software installations and configurations.
+이 섹션에서는 리눅스 환경에서 CAN 통신을 설정하기 위한 포괄적인 가이드를 제공합니다. 필요한 소프트웨어 설치 및 구성을 포함합니다.
 
-## Introduction to CAN Setup in Linux
+## 리눅스에서의 CAN 설정 소개
 
-Overview of the prerequisites and the importance of setting up a Linux environment for CAN communication.
+리눅스 환경에서 CAN 통신을 설정하기 위한 필수 사항과 중요성에 대한 개요입니다.
 
-### Prerequisites
+### 필수 사항
 
-- Basic knowledge of Linux operating systems.
-- Hardware requirements for CAN communication.
+- 리눅스 운영 체제에 대한 기본 지식.
+- CAN 통신을 위한 **하드웨어 요구 사항**.
 
-## Installing Necessary Software and Drivers
+## 필요한 소프트웨어 및 드라이버 설치
 
-Step-by-step instructions for installing the software and drivers needed for CAN communication in Linux.
+리눅스에서 CAN 통신을 위해 필요한 소프트웨어 및 드라이버 설치에 대한 단계별 지침.
 
-### CAN Utilities Installation
+### CAN 유틸리티 설치
 
-- Guide to installing `can-utils`, a collection of command-line utilities for CAN communication.
+- CAN 통신을 위한 명령줄 유틸리티 모음인 `can-utils` 설치 가이드.
 
-### Driver Installation and Configuration
+### 드라이버 설치 및 구성
 
-- Instructions for installing necessary drivers for CAN interfaces.
+- CAN 인터페이스에 필요한 드라이버 설치 지침.
 
-## Configuring Linux for CAN Communication
+## 리눅스에서 CAN 통신 구성
 
-Detailed explanation of how to configure Linux for CAN communication.
+리눅스에서 CAN 통신을 구성하는 방법에 대한 자세한 설명.
 
-### Setting Up CAN Network Interfaces
+### CAN 네트워크 인터페이스 설정
 
-- How to set up CAN network interfaces using Linux command-line tools.
+- 리눅스 명령줄 도구를 사용하여 CAN 네트워크 인터페이스를 설정하는 방법.
 
-### Testing CAN Interface
+### CAN 인터페이스 테스트
 
-- Procedures for testing the CAN interface to ensure it's properly configured.
+- CAN 인터페이스가 제대로 구성되었는지 확인하기 위한 절차.
 
-## Programming Environment Setup
+## 프로그래밍 환경 설정
 
-Guidance on setting up a development environment for CAN programming in Linux.
+리눅스에서 CAN 프로그래밍을 위한 개발 환경 설정 가이드.
 
-### Installing C++ Development Tools
+### C++ 개발 도구 설치
 
-- Instructions for installing C++ compilers and IDEs compatible with CAN programming.
+- CAN 프로그래밍과 호환되는 C++ 컴파일러 및 IDE 설치 지침.
 
-### Configuring Development Environment
+### 개발 환경 구성
 
-- Tips on configuring the development environment for efficient CAN programming.
+- 효율적인 CAN 프로그래밍을 위한 개발 환경 구성 팁.
 
-## Conclusion
+## 결론
 
-Concluding remarks on setting up a Linux environment for CAN communication and pointers for further exploration.
+리눅스 환경에서 CAN 통신 설정에 대한 결론 및 추가 탐구를 위한 지침.
 
-### Additional Resources
+### 추가 자료
 
-- Links to comprehensive guides, tutorials, and forums for Linux CAN communication setup.
-
-
+- 리눅스에서 CAN 통신 설정을 위한 종합적인 가이드, 튜토리얼 및 포럼에 대한 링크.
