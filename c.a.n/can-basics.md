@@ -16,11 +16,11 @@ CAN(Controller Area Network)이란, 차량 내에서 호스트 컴퓨터 없이 
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/16659723440 (1).jpg" alt=""><figcaption><p>(출처 : CAN 통신의 이 - 기술블로)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/16659723440 (1).jpg" alt=""><figcaption><p>(출처 : CAN 통신의 이해 - 기술블로그)</p></figcaption></figure>
 
 </div>
 
-### CAN 통신의 역사
+## CAN 통신의 역사
 
 CAN 버스의 개발은 **1983년 로버트 보쉬 GmbH**에서 시작되었습니다. 이 프로토콜은 **1986년 디트로이트, 미시간**에서 열린 자동차 엔지니어 협회(SAE) 콘퍼런스에서 공식적으로 발표되었습니다. 최초의 CAN 컨트롤러 칩은 **1987년 인텔**에 의해 소개되었으며, 이어 필립스에 의해서도 소개되었습니다. **메르세데스-벤츠 W140**은 CAN 기반 복합 배선 시스템을 특징으로 하는 최초의 생산 차량이었습니다.
 
