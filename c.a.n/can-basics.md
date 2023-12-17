@@ -1,12 +1,10 @@
 ---
-description: CAN 관련된 것
+description: 이 섹션에서는 CAN (Controller Area Network) 통신의 기본 개념, 역사, 그리고 중요성에 대해 다룹니다.
 cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
 ---
 
 # CAN Basics
-
-이 섹션에서는 **CAN (Controller Area Network) 통신의 기본 개념, 역사, 그리고 중요성**에 대해 다룹니다.
 
 {% hint style="info" %}
 **알아두면 좋은 사실:** CAN 통신은 차량 내 네트워크, 산업 자동화 시스템, 그리고 여러 다른 맥락에서 **중요한 역할**을 합니다.
@@ -14,9 +12,13 @@ coverY: 0
 
 ## CAN 통신이란?
 
-CAN 통신은 본래 자동차 내 복합 전기 배선을 위해 설계된 **메시지 기반 프로토콜**로, 동시에 여러 다른 맥락에서도 사용됩니다. 이는 호스트 컴퓨터 없이 다양한 장치 간에 **신뢰할 수 있는 데이터 교환**을 가능하게 합니다.
+CAN(Controller Area Network)이란, 차량 내에서 호스트 컴퓨터 없이 마이크로 컨트롤러나 장치들이 서로 통신하기 위해 설계된 **표준 통신 규격**입니다. **차량 내 \*ECU(Electronic control unit)들은 CAN 프로토콜을 사용하여 통신**합니다. 초기에는 차량 네트워크용으로 개발되었으나 최근에는 차량뿐만 아니라 산업 전 분야에 폭넓게 적용되고 있으며, 기본적인 시스템 구성은 아래와 같습니다.
 
-![What is CAN Communication](../.gitbook/assets/What\_CAN.png)
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/16659723440 (1).jpg" alt=""><figcaption><p>(출처 : CAN 통신의 이 - 기술블로)</p></figcaption></figure>
+
+</div>
 
 ### CAN 통신의 역사
 
