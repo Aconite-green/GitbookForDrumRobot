@@ -2,13 +2,23 @@
 description: 이 섹션에서는 CAN (Controller Area Network) 통신의 기본 개념에 대해 다룹니다.
 cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
+layout:
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # CAN Basics
-
-{% hint style="info" %}
-**알아두면 좋은 사실:** CAN 통신은 차량 내 네트워크, 산업 자동화 시스템, 그리고 여러 다른 맥락에서 **중요한 역할**을 합니다.
-{% endhint %}
 
 ## 1. CAN 통신이란?
 
@@ -47,8 +57,6 @@ CAN은 여러 CAN 디바이스간 통신을 위한 **경제적이며 안정적�
 네트워크상에 연결된 모든 노드는 네트워크상에 있는 메시지를 수신한 후 **자신이 필요로 하는 식별자의 메시지인 경우에만 받아들이고**, 그렇지 않은 경우의 메시지는 무시합니다. 네트워크상(CAN 통신 라인)에 흘러 다니는 여러 노드의 데이터들이 동시에 사용자가 필요로 하는 노드로 유입되는 경우에는 식별자의 숫자를 비교하여 먼저 받아들일 메시지의 우선순위를 정하는데, 식별자의 숫자가 낮을수록 우선순위가 높습니다.&#x20;
 
 **우선순위가 높은 메시지가 CAN 버스의 사용 권한을 보장**받으며 이때 낮은 순위의 메시지는 자동적으로 다음 버스 사이클에 재전송이 되도록 합니다. 각 CAN 메시지는 11비트의 식별자(CAN 2.0A), 또는 29비트의 식별자(CAN 2.0B)를 가지며, CAN 메시지의 맨 처음 시작부분에 위치(그림 3 참조)합니다. **이러한 식별자는 네트워크가 결정성 있는 타이밍 제약을 충족할 수 있도록 합니다.**
-
-
 
 ### 에러 기능
 
