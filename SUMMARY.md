@@ -29,7 +29,7 @@
 ## C.A.N
 
 * [CAN Basics](c.a.n/can-basics.md)
-* [CAN Protocols](c.a.n/can-protocols.md)
+* [CAN Protocol](c.a.n/can-protocols.md)
 * [CPP CAN Programming](c.a.n/cpp-can-programming.md)
 * [Linux Setup for CAN](c.a.n/linux-setup-for-can.md)
 
