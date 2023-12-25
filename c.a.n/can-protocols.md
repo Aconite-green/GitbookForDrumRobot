@@ -101,6 +101,12 @@ ISO 11898 아키텍처는 OSI/ISO 모델의 일곱 계층 중 데이터 링크 �
 * **예시**: 벤더 독립적인 CAN open 프로토콜 같은 특정 응용 프로그램 프로토콜 지원.
 * **역할**: 사용자 및 제조업체 그룹 CAN in Automation (CIA)에 의해 지원되는 프로토콜을 사용하여 통신합니다.
 
+{% embed url="https://danfosseditron.zendesk.com/hc/en-gb/articles/360042232992-CAN-bus-physical-layer" %}
+
+{% file src="../.gitbook/assets/slla270.pdf" %}
+Control Area Network Physical Layer Requirements
+{% endfile %}
+
 ### 결론
 
 CAN 프로토콜은 OSI 7계층 모델에 기반하여 구축되어, 각 계층의 역할을 통해 효율적이고 신뢰할 수 있는 데이터 통신을 가능하게 합니다.
