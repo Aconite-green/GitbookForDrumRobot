@@ -74,26 +74,32 @@ $$Signaling Rate (Mbps) × Bus Length (m) ≤ 50$$
 CAN 통신에서 접지(Ground)를 연결하는 주된 이유는 **전기적 노이즈와 간섭을 최소화하고, 시스템의 전기적 안정성을 높이기 위함**입니다. CAN 시스템은 차량과 같이 전기적 노이즈가 많은 환경에서도 안정적으로 작동해야 하며, 접지는 이러한 노이즈로부터 시스템을 보호합니다. 또한, 접지 연결은 CAN 네트워크의 다양한 구성 요소 간에 공통의 참조 전압을 제공하여, 신호 무결성을 유지하는 데 도움이 됩니다. **연결하지 않아도 통신이 가능**할 수 있지만, 안정적인 통신을 위해서는 접지 연결이 권장됩니다.\
 
 
-## 4.Line Terminations (Standard)
+## 4.Line Terminations
 
+CAN (Controller Area Network) 통신에서 양쪽 끝에 **120-Ω의 저항을 설치하는 이유는 전송선로의 반사파(reflections)를 최소화하기 위해서**입니다. 이러한 반사파는 신호의 왜곡이나 간섭을 일으킬 수 있으며, 특히 높은 데이터 전송 속도에서 더욱 문제가 됩니다.
 
+CAN 네트워크는 다수의 노드(node)가 트위스티드-페어 케이블을 통해 연결되는 버스 구조를 가지고 있습니다. 이러한 구조에서 신호는 케이블을 따라 양쪽 방향으로 전파됩니다. 케이블의 끝에 도달하면, 신호는 반사되어 다시 돌아옵니다. 이 **반사된 신호는 원래 신호와 중첩되어 간섭을 일으킬 수 있습니다.**
 
-## 6. Connectors
+120-Ω의 저항을 케이블의 양쪽 끝에 설치함으로써, 케이블의 특성 임피던스와 일치시키게 됩니다. 특성 임피던스란 케이블이 전기 신호를 전송할 때 나타내는 저항값을 의미합니다. 케이블의 특성 임피던스와 종단 저항이 일치하면, 신호는 **케이블 끝에서 반사되지 않고 저항에 의해 흡수**됩니다. 이렇게 함으로써 신호의 반사를 최소화하고, 데이터 전송의 신뢰성을 높일 수 있습니다.&#x20;
 
-## 7. Maximum Number of Nodes
+<figure><img src="../.gitbook/assets/Screenshot from 2023-12-31 17-31-49.png" alt=""><figcaption><p>120Ohm 설치 여부 결과 사진</p></figcaption></figure>
 
+## 5. Connectors
 
+**일반적인 CAN 통신 커넥터 (창고용)**
 
-###
+<figure><img src="../.gitbook/assets/Screenshot from 2023-12-31 17-40-04.png" alt=""><figcaption><p>9-pin DSUB</p></figcaption></figure>
 
-### 데이터 링크 계층
+<figure><img src="../.gitbook/assets/Screenshot from 2023-12-31 17-42-09.png" alt=""><figcaption><p>5-Pin Mini-Connector</p></figcaption></figure>
+
+### \[ Data Link Layer ]
 
 ISO 11898 아키텍처는 OSI/ISO 모델의 일곱 계층 중 데이터 링크 계층과 물리 계층을 가장 낮은 두 계층으로 정의합니다.
 
 * **정의**: 네트워크 장치 간의 데이터 전송 및 오류 검출 기능을 담당합니다.
 * **역할**: 프레임 구조 및 오류 검출, 오류 수정 기능을 제공합니다.
 
-### 응용 계층
+### \[ Appliacation Layer ]
 
 응용 계층은 상위 레벨의 응용 프로그램 특화 프로토콜과의 통신 링크를 설정합니다.
 
@@ -107,6 +113,3 @@ ISO 11898 아키텍처는 OSI/ISO 모델의 일곱 계층 중 데이터 링크 �
 Control Area Network Physical Layer Requirements
 {% endfile %}
 
-### 결론
-
-CAN 프로토콜은 OSI 7계층 모델에 기반하여 구축되어, 각 계층의 역할을 통해 효율적이고 신뢰할 수 있는 데이터 통신을 가능하게 합니다.
