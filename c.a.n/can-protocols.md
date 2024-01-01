@@ -34,10 +34,10 @@ CAN 통신 프로토콜, **ISO 11898**은 네트워크 상의 장치들 사이�
 ## \[ Physical Layer ]&#x20;
 
 {% hint style="info" %}
-**물리 계층**은 모델의 가장 낮은 계층으로, 실제 장치 간의 통신을 정의합니다.
+**물리 계층**은 네트워크 통신의 하드웨어 측면을 담당합니다. 이 계층은 전기적 신호, 타이밍, 케이블의 물리적 특성, 커넥터 유형 등 통신에 필요한 물리적 매체와 하드웨어 인터페이스에 대한 표준을 정의합니다
 {% endhint %}
 
-## 1.Bus Length vs Signaling Rate
+## 1. Bus Length vs Signaling Rate
 
 <table data-full-width="true"><thead><tr><th align="center">Bus Length(m)</th><th align="center">Signaling Rate(m)</th></tr></thead><tbody><tr><td align="center">40</td><td align="center">1</td></tr><tr><td align="center">100</td><td align="center">0.5</td></tr><tr><td align="center">200</td><td align="center">0.25</td></tr><tr><td align="center">500</td><td align="center">0.10</td></tr><tr><td align="center">1000</td><td align="center">0.05</td></tr></tbody></table>
 
@@ -94,10 +94,47 @@ CAN 네트워크는 다수의 노드(node)가 트위스티드-페어 케이블�
 
 ### \[ Data Link Layer ]
 
-ISO 11898 아키텍처는 OSI/ISO 모델의 일곱 계층 중 데이터 링크 계층과 물리 계층을 가장 낮은 두 계층으로 정의합니다.
+{% hint style="info" %}
+**데이터 링크 계층**은 네트워크 장비 간의 신뢰성 있는 데이터 전송을 보장합니다CAN 통신에서 데이터 링크 계층은 프레임의 형식, 프레임 내 식별자의 우선 순위 결정, 오류 탐지 및 신호 방식 등을 규정합니다.
+{% endhint %}
 
-* **정의**: 네트워크 장치 간의 데이터 전송 및 오류 검출 기능을 담당합니다.
-* **역할**: 프레임 구조 및 오류 검출, 오류 수정 기능을 제공합니다.
+## 1.  Principles of data exchange
+
+<figure><img src="../.gitbook/assets/broadcast_02.gif" alt=""><figcaption></figcaption></figure>
+
+클래식 CAN은 **"브로드캐스트 통신 메커니즘"**을 기반으로 합니다. 모든 클래식 CAN 데이터 프레임은 네트워크 전체에서 고유해야 하는 식별자를 제공합니다. 이 식별자는 내용을 나타내고 네트워크 접근 우선순위를 정의합니다. 이는 여러 네트워크 참여자들이 네트워크 접근을 위해 경쟁할 때 중요합니다
+
+기존 네트워크에 클래식 CAN 노드를 추가하는 것은 새로운 클래식 CAN 노드가 수신기만일 경우 현재의 클래식 CAN 노드에 대한 **하드웨어나 소프트웨어 수정 없이 쉽게 할 수 있습니다**. 이를 통해 모듈러 개념을 허용하며, 다중 데이터 수신 및 분산된 프로세스의 동기화를 가능하게 합니다.
+
+## 2. Real-time data transmission
+
+실시간 처리에서 네트워크를 통해 교환되는 데이터의 긴급성은 크게 달라질 수 있습니다. 예를 들어, 빠르게 변하는 차원(예: 엔진 부하)은 다른 차원(예: 엔진 온도)보다 더 자주 전송되므로 지연이 덜합니다.
+
+데이터 프레임이 다른 덜 긴급한 데이터 프레임에 비해 **어떤 우선 순위로 전송되는지는 할당된 CAN 식별자에 의해 결정**됩니다. 이러한 우선 순위는 시스템 설계 중에 할당됩니다. CAN 식별자는 11비트 또는 29비트 이진값으로 구성됩니다. 가장 낮은 값이 가장 높은 우선순위를 가지며, 식별자 값이 높을수록 우선 순위는 낮아집니다.
+
+
+
+<figure><img src="../.gitbook/assets/arbitration_01.gif" alt=""><figcaption></figcaption></figure>
+
+여러 데이터 또는 원격 프레임이 동시에 네트워크 접근을 경쟁하는 경우, 네트워크 접근은 경쟁 중인 데이터 또는 원격 프레임의 **CAN 식별자를 비트 단위로 비교하여 협상됩니다.** 이 메커니즘을 '**비트 단위 중재**'라고 합니다. 네트워크 참여자(노드)들은 설정된 샘플 포인트에서 비트 단위로 신호 수준을 관찰합니다.
+
+이는 우세한 상태가 열세한 상태를 덮어쓰는 '**와이어드-앤드 메커니즘**'에 따라 일어납니다. 열세한 전송과 우세한 관찰을 하는 모든 노드들은 네트워크 접근 경쟁에서 패배합니다. 이러한 '패자'들은 자동적으로 현재 전송되고 있는 가장 높은 우선순위를 가진 **CAN 데이터 프레임의 수신자가 됩니다**. 그들은 현재 전송이 완료되고 네트워크가 다시 사용 가능해지면 자신의 CAN 데이터 프레임을 전송하려고 시도합니다.
+
+## 3. CAN data frame formats
+
+<figure><img src="../.gitbook/assets/다운로드.jpeg" alt=""><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="145">Field</th><th width="162">Composition [bit]</th><th>Function</th></tr></thead><tbody><tr><td><strong>SOF</strong></td><td>1</td><td>프레임 시작을 알리고 모든 노드를 프레임 전송을 위해 동기화합니다</td></tr><tr><td><strong>IDENTIFIER</strong></td><td>11</td><td>프레임 내용과 우선순위 결정</td></tr><tr><td><strong>RTR</strong></td><td>1</td><td>데이터 프레임과 원격 프레임 구별</td></tr><tr><td><strong>IDE</strong></td><td>1</td><td>베이스 프레임 형식과 확장 프레임 형식 구별</td></tr><tr><td><strong>r0</strong></td><td>1</td><td>향후 CAN 프로토콜의 발전에 따라 새로운 기능을 위한 공간으로 활용될 수 있는 예약된 1비트입니다.</td></tr><tr><td><strong>DLC</strong></td><td>4</td><td>데이터 필드의 길이를 나타냄</td></tr><tr><td><strong>DATA</strong></td><td>64</td><td>애플리케이션 데이터 전송</td></tr><tr><td><strong>CRC</strong></td><td>16</td><td>데이터 무결성 검증</td></tr><tr><td><strong>ACK</strong></td><td>2</td><td>수신 노드가 프레임을 올바르게 받았음을 확인</td></tr><tr><td><strong>EOF</strong></td><td>7</td><td>데이터 프레임 또는 원격 프레임의 끝을 표시</td></tr><tr><td><strong>IFS</strong></td><td>미정</td><td>프레임 사이의 최소 시간 간격 정의</td></tr></tbody></table>
+
+{% hint style="info" %}
+Extended Format은 프로젝트에서 사용하지 않았기 때문에 다루지 않았습니다
+{% endhint %}
+
+## 4. Detecting and signaling errors
+
+###
+
+###
 
 ### \[ Appliacation Layer ]
 
