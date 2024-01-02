@@ -124,7 +124,7 @@ CAN 네트워크는 다수의 노드(node)가 트위스티드-페어 케이블�
 
 <figure><img src="../.gitbook/assets/다운로드.jpeg" alt=""><figcaption></figcaption></figure>
 
-<table><thead><tr><th width="115.33333333333331" align="center">Field</th><th width="80" align="center">bit</th><th align="center">Function</th></tr></thead><tbody><tr><td align="center"><strong>SOF</strong></td><td align="center">1</td><td align="center">프레임 시작을 알리고 모든 노드를 프레임 전송을 위해 동기화합니다</td></tr><tr><td align="center"><strong>IDENTIFIER</strong></td><td align="center">11</td><td align="center">프레임 내용과 우선순위 결정</td></tr><tr><td align="center"><strong>RTR</strong></td><td align="center">1</td><td align="center">데이터 프레임과 원격 프레임 구별</td></tr><tr><td align="center"><strong>IDE</strong></td><td align="center">1</td><td align="center">베이스 프레임 형식과 확장 프레임 형식 구별</td></tr><tr><td align="center"><strong>r0</strong></td><td align="center">1</td><td align="center">향후 CAN 프로토콜의 발전에 따라 새로운 기능을 위한 공간으로 활용될 수 있는 예약된 1비트입니다.</td></tr><tr><td align="center"><strong>DLC</strong></td><td align="center">4</td><td align="center">데이터 필드의 길이를 나타냄</td></tr><tr><td align="center"><strong>DATA</strong></td><td align="center">64</td><td align="center">애플리케이션 데이터 전송</td></tr><tr><td align="center"><strong>CRC</strong></td><td align="center">16</td><td align="center">데이터 무결성 검증</td></tr><tr><td align="center"><strong>ACK</strong></td><td align="center">2</td><td align="center">수신 노드가 프레임을 올바르게 받았음을 확인</td></tr><tr><td align="center"><strong>EOF</strong></td><td align="center">7</td><td align="center">데이터 프레임 또는 원격 프레임의 끝을 표시</td></tr><tr><td align="center"><strong>IFS</strong></td><td align="center">미정</td><td align="center">프레임 사이의 최소 시간 간격 정의</td></tr></tbody></table>
+<table><thead><tr><th width="142.33333333333331" align="center">Field</th><th width="80" align="center">bit</th><th align="center">Function</th></tr></thead><tbody><tr><td align="center"><strong>SOF</strong></td><td align="center">1</td><td align="center">프레임 시작을 알리고 모든 노드를 프레임 전송을 위해 동기화합니다</td></tr><tr><td align="center"><strong>IDENTIFIER</strong></td><td align="center">11</td><td align="center">프레임 내용과 우선순위 결정</td></tr><tr><td align="center"><strong>RTR</strong></td><td align="center">1</td><td align="center">데이터 프레임과 원격 프레임 구별</td></tr><tr><td align="center"><strong>IDE</strong></td><td align="center">1</td><td align="center">베이스 프레임 형식과 확장 프레임 형식 구별</td></tr><tr><td align="center"><strong>r0</strong></td><td align="center">1</td><td align="center">향후 CAN 프로토콜의 발전에 따라 새로운 기능을 위한 공간으로 활용될 수 있는 예약된 1비트입니다.</td></tr><tr><td align="center"><strong>DLC</strong></td><td align="center">4</td><td align="center">데이터 필드의 길이를 나타냄</td></tr><tr><td align="center"><strong>DATA</strong></td><td align="center">64</td><td align="center">애플리케이션 데이터 전송</td></tr><tr><td align="center"><strong>CRC</strong></td><td align="center">16</td><td align="center">데이터 무결성 검증</td></tr><tr><td align="center"><strong>ACK</strong></td><td align="center">2</td><td align="center">수신 노드가 프레임을 올바르게 받았음을 확인</td></tr><tr><td align="center"><strong>EOF</strong></td><td align="center">7</td><td align="center">데이터 프레임 또는 원격 프레임의 끝을 표시</td></tr><tr><td align="center"><strong>IFS</strong></td><td align="center">미정</td><td align="center">프레임 사이의 최소 시간 간격 정의</td></tr></tbody></table>
 
 {% hint style="info" %}
 **Extended Format**은 프로젝트에서 사용하지 않았기 때문에 다루지 않았습니다
@@ -154,21 +154,66 @@ CAN 네트워크는 다수의 노드(node)가 트위스티드-페어 케이블�
 
 ## \[ Appliacation Layer ]
 
-응용 계층은 상위 레벨의 응용 프로그램 특화 프로토콜과의 통신 링크를 설정합니다.
+{% hint style="info" %}
+**응용 계층(Application Layer)**은 컴퓨터 네트워킹 모델에서 가장 상위에 위치하는 계층으로, **사용자 인터페이스와 네트워크 서비스** 사이의 직접적인 상호작용을 담당합니다. 이 계층의 주요 역할은 다음과 같습니다:
+{% endhint %}
 
-* **정의**: 상위 레벨의 응용 프로그램 특화 프로토콜과의 통신을 담당합니다.
-* **예시**: 벤더 독립적인 CAN open 프로토콜 같은 특정 응용 프로그램 프로토콜 지원.
-* **역할**: 사용자 및 제조업체 그룹 CAN in Automation (CIA)에 의해 지원되는 프로토콜을 사용하여 통신합니다.
+가장 중요한 표준화된 CAN 기반 상위 계층 프로토콜에는 다음이 포함됩니다:
+
+* **CANopen (CiA 301)**: 일반적인 임베디드 실시간 제어를 위한 클래식 CAN 기반
+* **CANopen FD (CiA 1301)**: 고급 기능을 갖춘 임베디드 실시간 제어를 위한 CAN FD 및 CAN XL 기반
+* **J1939 애플리케이션 프로파일들**: 다양한 도메인을 위한 클래식 CAN 및 CAN FD 기반
+* **Devicenet 프로파일**: 공장 자동화를 위한 클래식 CAN 기반
+
+가장 일반적인 상위 계층 접근 방식은 **CANopen**입니다. CANopen은 장치 설계자가 장치에 원하는 네트워크 동작을 구현할 수 있도록 하는 **여러 통신 객체를 제공**합니다. 이러한 통신 객체를 사용하여 장치 설계자는 프로세스 데이터를 전달하고, 장치 내부 오류 조건을 표시하며, 네트워크 동작을 영향을 주고 제어할 수 있는 장치를 제공할 수 있습니다.&#x20;
+
+다음은 CANopen에서 사용되는 대표적인 통신 객체들(프로토콜)에 대한 설명입니다
+
+### **1. SDO Protocol (Service Data Object)**
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-01-02 13-13-36.png" alt="" width="545"><figcaption></figcaption></figure>
+
+**SDO 프로토콜은 주로 장치 구성 및 진단에 사용됩니다.** 이를 통해 네트워크 상의 장치 간에 복잡한 데이터를 전송하거나 장치 설정을 변경할 수 있습니다. SDO는 보통 느린 속도의 통신에 사용되며, 일대일 통신을 위한 것입니다.
+
+SDO를 통해 두 CANopen 장치 간에 **피어-투-피어 클라이언트-서버 통신**이 CAN 브로드캐스트 매체에서 설정될 수 있습니다. 접근된 객체 사전의 소유자는 SDO의 서버로 작용합니다. 다른 장치의 객체 사전에 접근하는 장치는 SDO 클라이언트입니다.
+
+### **2. PDO Protocol (Process Data Object)**
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-01-02 13-16-21.png" alt="" width="544"><figcaption></figcaption></figure>
+
+**프로세스 데이터 객체(PDO)**는 CANopen에서 고우선순위 제어 및 상태 정보를 **브로드캐스팅**하는 데 사용됩니다. PDO는 단일 CAN 프레임으로 구성되며, 최대 8바이트의 순수 응용 데이터를 통신합니다. 장치 설계자는 장치가 수신하고 전송해야 할 프로세스 데이터의 양을 설정해야 합니다. 이 설정에 따라, 사용자는 장치 내에서 관련 수신 및 전송 PDO의 양을 제공해야 합니다.
+
+{% hint style="info" %}
+PDO 통신을 할 때는 일반적으로 **PDO 매핑**을 해야하는 경우가 있습니다. **PDO 매핑은** PDO 내에서 전송되는 응용 객체를 정의하는 행위를 말하며 가령 특정 CANID로 특정데이터를 전송한다고 가정하면  **"어떤 CANID에 어떤 데이터(Position, Speed 등등)를 보낼지/받을지 설정"** 하는 작업을 말합니다
+{% endhint %}
+
+### **3. NMT 프로토콜 (Network Management)**
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-01-02 13-29-24.png" alt="" width="563"><figcaption></figcaption></figure>
+
+모든 CANopen 장치는 CANopen 네트워크 관리 (NMT) **슬레이브 상태 머신을 지원**해야 합니다. NMT 상태 머신은 CANopen 장치의 통신 동작을 정의합니다. CANopen NMT 상태 머신은 초기화 상태, 사전 운영 상태, 운영 상태 및 정지 상태로 구성됩니다. 전원이 켜지거나 리셋 후, 장치는 초기화 상태로 진입합니다.
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-01-02 13-29-59.png" alt="" width="466"><figcaption><p>NMT Slave State Machine</p></figcaption></figure>
+
+<table><thead><tr><th width="179">NMT State</th><th>설명</th></tr></thead><tbody><tr><td>Initialization</td><td>장치가 시작되고 내부 매개변수가 초기화됩니다.</td></tr><tr><td>Pre-Operational</td><td>장치 초기화 후 자동으로 진입합니다.<br>SDO 통신은 가능하지만, PDO 통신은 <strong>비활성화</strong>됩니다.</td></tr><tr><td>Operational</td><td>장치가 모든 지원되는 통신 객체를 사용할 수 있습니다.<br><strong>PDO 및 SDO 통신이 가능</strong>합니다.<br>실시간 데이터 처리 및 제어에 사용됩니다.</td></tr><tr><td>Stopped</td><td>NMT 명령에만 반응합니다.<br>대부분의 <strong>네트워크 활동이 중단</strong>되고, 제한된 기능만 수행합니다.</td></tr></tbody></table>
 
 
 
 ## \[ 내용 및 이미지 출처 ]
 
+{% embed url="https://www.can-cia.org/de/can-knowledge/canopen/canopen/" %}
+**Application Layer**
+{% endembed %}
+
 {% embed url="https://www.can-cia.org/de/can-knowledge/can/classical-can/" %}
+Data Link Layer
+{% endembed %}
 
 {% embed url="https://danfosseditron.zendesk.com/hc/en-gb/articles/360042232992-CAN-bus-physical-layer" %}
+Physical Layer
+{% endembed %}
 
 {% file src="../.gitbook/assets/slla270.pdf" %}
-Control Area Network Physical Layer Requirements
+Physical Layer
 {% endfile %}
 

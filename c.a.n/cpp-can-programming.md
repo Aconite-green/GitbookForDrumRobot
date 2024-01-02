@@ -1,37 +1,35 @@
 ---
-description: CAN 관련된 것
 cover: ../.gitbook/assets/dd9d76e1-0c22-41ac-b8d7-1b352b3a9fc6.png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# CPP CAN Programming
+# CAN Programming
 
-이 섹션에서는 **C++를 사용하여 CAN 통신을 프로그래밍하는 방법**에 대해 심층적으로 다룹니다.
+## \[ SocketCAN Lib]
 
-## C++에서의 CAN 프로그래밍 소개
+<div data-full-width="true">
 
-**C++를 사용하여 CAN 프로그래밍**을 시작하는 데 필요한 기본사항을 설명합니다. **CANsocket 라이브러리**에 대한 정보를 포함합니다.
+<figure><img src="../.gitbook/assets/img.gif" alt=""><figcaption><p>Basic Socket Communication</p></figcaption></figure>
 
-### 필요한 도구 및 라이브러리
+</div>
 
-* **CAN 프로그래밍에 적합한 C++ 컴파일러** 및 개발 환경.
-* **CANsocket 라이브러리** 및 관련 드라이버에 대한 안내.
+SocketCAN 패키지는 **리눅스용 CAN(Controller Area Network) 프로토콜의 구현체**입니다. CAN은 자동화, 임베디드 장치 및 자동차 분야에서 널리 사용되는 네트워킹 기술입니다. 리눅스 기반의 다른 CAN 구현체들이 문자 장치를 기반으로 했던 반면, SocketCAN은 Berkeley 소켓 API와 리눅스 네트워크 스택을 사용하며, CAN 장치 드라이버를 네트워크 인터페이스로 구현합니다. **CAN 소켓 API는 네트워크 프로그래밍에 익숙한 프로그래머들이 쉽게 CAN 소켓 사용 방법을 배울 수 있도록** TCP/IP 프로토콜과 가능한 한 유사하게 설계되었습니다.
 
-## C++와 CAN 인터페이스 통합하기
 
-**C++ 코드와 CAN 하드웨어 인터페이스를 통합하는 방법**에 대한 지침을 제공합니다.
-
-### CAN 인터페이스 선택
-
-* **다양한 응용 프로그램에 적합한 CAN 하드웨어 선택 기준**.
-
-## CAN Socket API를 이용한 C++ 프로그래밍
-
-**CAN Socket API를 사용한 통신**에 대한 자세한 설명 및 예제 코드.
-
-### CAN Socket API 기본 개념
-
-* **CAN 통신을 위한 소켓 프로그래밍의 기초**에 대해 설명합니다.
 
 ### 예제: CAN 메시지 송수신
 
@@ -65,8 +63,10 @@ int main() {
     frame.can_dlc = 2;
     frame.data[0] = 0x11;
     frame.data[1] = 0x22;
+    
     write(s, &frame, sizeof(frame));
-
+    //read(s, &frame, sizeof(frame));
+    
     // 소켓 닫기
     close(s);
 
@@ -74,24 +74,8 @@ int main() {
 }
 ```
 
-## 고급 CAN 프로그래밍 개념
+## \[ CAN Utils ]
 
-C++에서 CAN 프로그래밍의 더 복잡한 측면을 다룹니다.
+## \[ 내용 및 이미지 출처 ]
 
-### 오류 처리 및 진단
-
-* CAN 통신에서 발생할 수 있는 **오류의 탐지와 처리 기법**에 대해 설명합니다.
-* 오류 상황에서의 **진단 방법**과 **복구 절차**를 상세히 다룹니다.
-
-### CAN 통신 최적화
-
-* CAN 시스템의 **성능과 신뢰성을 최적화**하기 위한 다양한 전략을 제공합니다.
-* 메시지 처리 속도 향상 및 네트워크 효율성 증대를 위한 **프로그래밍 기법**을 소개합니다.
-
-## 결론
-
-C++를 사용한 CAN 프로그래밍에 대한 주요 포인트를 요약하고, CAN 프로그래밍을 더 깊이 탐구할 수 있는 **추가적인 자료와 리소스**를 제공합니다.
-
-### 추가적인 독서 및 자료
-
-* C++ CAN 프로그래밍에 대한 **고급 튜토리얼, 기술 문서 및 커뮤니티 포럼**에 대한 링크를 포함합니다. 이 자료들은 CAN 프로그래밍의 심화 학습과 응용에 도움이 될 것입니다.
+{% embed url="https://www.beyondlogic.org/example-c-socketcan-code/" %}
