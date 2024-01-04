@@ -9,8 +9,8 @@
 * [Basic Linux Commands](linux/basic\_linux\_commands.md)
 * [Linux Programming Basics](linux/linux\_programming\_basics.md)
 * [Hardware Communication in Linux](linux/hardware\_communication\_in\_linux.md)
-* [Linux for Robotics](linux/linux\_for\_robotics.md)
-* [Linux Networking and Security](linux/linux\_networking\_and\_security.md)
+* [Linux for Robotics](linux/linux-for-robotics.md)
+* [Linux Networking and Security](linux/linux-networking-and-security.md)
 * [Linux Performance Tuning](linux/linux\_performance\_tuning.md)
 
 ## C++
