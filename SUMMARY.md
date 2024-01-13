@@ -16,9 +16,7 @@
 * [Understanding STL in CPP](c++/understanding\_stl\_in\_cpp.md)
 * [Exception Handling and Error Management](c++/exception\_handling\_and\_error\_management.md)
 * [Concurrency and Parallelism in CPP](c++/concurrency\_and\_parallelism\_in\_cpp.md)
-* [Test Driven Development in CPP](c++/test\_driven\_development\_in\_cpp.md)
 * [CPP Code Optimization Techniques](c++/cpp\_code\_optimization\_techniques.md)
-* [OOP and Design Patterns in CPP](c++/oop\_and\_design\_patterns\_in\_cpp.md)
 * [Naming Conventions in CPP](c++/cpp\_naming\_conventions.md)
 
 ## C.A.N
