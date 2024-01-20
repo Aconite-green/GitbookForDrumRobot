@@ -21,6 +21,7 @@
 * [Installing Linux](linux/installing\_linux.md)
 * [Basic Linux Commands](linux/basic\_linux\_commands.md)
 * [Linux Programming Basics](linux/linux\_programming\_basics.md)
+* [Real-Time OS](linux/real-time-os.md)
 
 ## C++
 
