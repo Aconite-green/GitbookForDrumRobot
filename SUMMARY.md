@@ -1,6 +1,19 @@
 # Table of contents
 
+## Drum Robot
+
 * [Welcome to Drumrobot Project](README.md)
+
+## HW
+
+* [Motors](hw/motors.md)
+* [USB to CAN Interface](hw/usb-to-can-interface.md)
+* [SMPS](hw/smps.md)
+* [Controller](hw/controller.md)
+
+## SW
+
+* [Doxygen](sw/doxygen.md)
 
 ## LINUX
 
