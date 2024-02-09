@@ -1,23 +1,8 @@
 # Table of contents
 
-## Drum Robot
-
-* [Welcome to Drumrobot Project](README.md)
-
-## HW
-
-* [Motors](hw/motors.md)
-* [USB to CAN Interface](hw/usb-to-can-interface.md)
-* [SMPS](hw/smps.md)
-* [Controller](hw/controller.md)
-
-## SW
-
-* [Doxygen](sw/doxygen.md)
-
 ## LINUX
 
-* [Introduction to Linux](linux/linux\_introduction.md)
+* [Introduction to Linux](README.md)
 * [Installing Linux](linux/installing\_linux.md)
 * [Basic Linux Commands](linux/basic\_linux\_commands.md)
 * [Linux Programming Basics](linux/linux\_programming\_basics.md)
